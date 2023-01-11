@@ -1,59 +1,66 @@
 import Image from 'next/image'
+import { Info, X } from 'phosphor-react'
 
 type CardProps = {
   postedDate: string
   companyName: string
   companyLogo: string
-  stars: string
   jobUrl: string
   jobDescription: string
   jobTitle: string
   jobLocation: string
   estimatedSalary: string
-  salary: {
-    average: 92000
-    high: 113000
-    low: 71000
-  }
   expanded: boolean
   handleExpand: () => void
-  index: number
 }
 
 export const Card = ({
-  companyLogo,
   companyName,
   jobDescription,
   jobTitle,
-  jobUrl,
   postedDate,
-  stars,
   jobLocation,
   estimatedSalary,
-  salary,
   expanded,
   handleExpand,
-  index,
-}: Partial<CardProps>) => {
+  companyLogo,
+  jobUrl,
+}: CardProps) => {
   return (
-    <button
-      tabIndex={index}
-      className={`w-full rounded-md border border-black/5 bg-base-100 shadow-xl transition-all hover:bg-gray-100 lg:card-side ${
-        expanded ? 'col-span-full hover:bg-gray-50 xl:w-full' : ''
+    <div
+      className={`flex w-full flex-col rounded-md border border-black/5 bg-base-100 shadow-xl transition-all lg:card-side ${
+        expanded ? 'col-span-full bg-gray-50 xl:w-full' : ''
       }`}
-      onClick={handleExpand}
     >
       <div className="card-body text-left">
-        <a className="card-title pb-4 hover:text-blue-600" href="#">
-          <Image
-            src="https://logo.clearbit.com/pginvestor.com"
-            alt=""
-            width={45}
-            height={45}
-            className="rounded-full"
-          />
-          {jobTitle}
-        </a>
+        <div className="flex items-center justify-between pb-4">
+          <a
+            className="card-title transition-colors hover:text-blue-600"
+            href={jobUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src={
+                companyLogo ??
+                'https://static.zippia.com/ui-router/logo/logo_mobile_white.png'
+              }
+              alt=""
+              width={45}
+              height={45}
+              className="rounded-full"
+            />
+            {jobTitle}
+          </a>
+
+          <button
+            className="btn-ghost btn gap-2 text-blue-600 hover:bg-transparent hover:text-blue-400"
+            onClick={handleExpand}
+          >
+            {expanded ? 'Close' : 'See more'}
+            {expanded ? <X size={24} /> : <Info size={24} />}
+          </button>
+        </div>
 
         <div>
           <p className="font-medium">{companyName}</p>
@@ -64,7 +71,7 @@ export const Card = ({
           className={`line-clamp-3 ${expanded ? 'line-clamp-none' : ''}`}
           dangerouslySetInnerHTML={{ __html: jobDescription }}
         ></p>
-        <div className="card-actions items-center justify-between pt-4">
+        <div className="card-actions items-center justify-between justify-self-end pt-4">
           <div>
             <p>
               {estimatedSalary} <span>{postedDate}</span>
@@ -75,6 +82,6 @@ export const Card = ({
           </button>
         </div>
       </div>
-    </button>
+    </div>
   )
 }
