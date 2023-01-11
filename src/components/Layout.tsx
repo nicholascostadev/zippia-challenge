@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
-import FilterIcon from '../icons/FilterIcon.svg'
-import Image from 'next/image'
 import { Sidebar } from './Sidebar'
+import { Faders } from 'phosphor-react'
 
 type LayoutProps = {
   children: ReactNode
@@ -22,7 +21,7 @@ export const Layout = ({
           htmlFor="my-drawer-2"
           className="btn-ghost drawer-button btn m-4 rounded-md lg:hidden"
         >
-          <Image src={FilterIcon as string} alt="" width={24} height={24} />
+          <Faders size={24} />
         </label>
         {children}
       </div>
