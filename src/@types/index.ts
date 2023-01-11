@@ -1,17 +1,13 @@
 export type Job = {
   jobId: string
-  unifiedZippiaSalary: string
+  companyLogo: string
   estimatedSalary: string
   jobURL: string
   postedDate: string
+  postingDate: string
   OBJcompanyDisplay: string
   OBJdesc: string
-  formattedOriginalCompanyName: string
+  OBJurl: string
   jobTitle: string
   location: string
-  salary: {
-    average: number
-    high: number
-    low: number
-  }
 }
