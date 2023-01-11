@@ -15,7 +15,7 @@ export const Header = () => {
       <div className="flex-none gap-4">
         <div>
           <Link href="/test/jobs" className="text-lg hover:text-gray-400">
-            Jobs
+            Jobs for you
           </Link>
         </div>
         <div className="dropdown-end dropdown">
