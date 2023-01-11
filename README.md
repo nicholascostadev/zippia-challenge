@@ -1,28 +1,61 @@
-# Create T3 App
+# Zippia Challenge
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## 📚 Idea
 
-## What's next? How do I make an app with this?
+This project was made for the web development job opportunity given by Zippia. The project is meant to be a page that renders job posts and render them.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+There's not much functionality but I cared about styling it well and making it as responsive as it could.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## 💻 Technologies
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- React.
+- Typescript.
 
-## Learn More
+## 🔮 Libraries
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+- Axios
+- TailwindCSS
+- DaisyUI
+- TRPC
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## 🔆 Functionalities
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- Back-end
+  - Back-end was created using the Nextjs route api with TRPC, so there's no complete separate back-end. It works just like any other rest API but you can also search by specific items as you would using GraphQL
+- Front-end
+  - You can expand the job post
+  - Click on the job to be redirected to the corresponding job page
 
-## How do I deploy this?
+## 📱 Preview
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+<p align="center"> - <a href="https://zippia-challenge-eight.vercel.app/test/jobs">Link do projeto</a> </p>
+<br>
+<h2 align="center"> Initial page </h2>
+
+![DevsHelping-1](./readmeAssets/desktop.png)
+
+<h2 align="center"> Initial page but with job post open </h2>
+
+![DevsHelping-3](./readmeAssets/desktop-see-more.png)
+
+<h2 align="center"> Initial page but on the list part </h2>
+
+![DevsHelping-3](./readmeAssets/desktop-list.png)
+
+<h2 align="center"> Mobile </h2>
+
+<p align="center">
+  <img src="./readmeAssets/mobile.png">
+</p>
+
+<h2 align="center"> Mobile Sidebar with job post open </h2>
+
+<p align="center">
+  <img src="./readmeAssets/mobile-see-more.png">
+</p>
+
+<h2 align="center"> Mobile Sidebar </h2>
+
+<p align="center">
+  <img src="./readmeAssets/mobile-sidebar.png">
+</p>
