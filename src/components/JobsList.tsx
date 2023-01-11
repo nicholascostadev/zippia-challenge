@@ -66,9 +66,14 @@ export const JobsList = ({ jobs }: JobListProps) => {
                 dangerouslySetInnerHTML={{ __html: job.OBJdesc }}
               ></p>
 
-              <p className="pt-4">
-                {job.estimatedSalary} <span>{job.postedDate}</span>
-              </p>
+              <div className="flex items-center justify-between pt-4">
+                <p>
+                  {job.estimatedSalary} <span>{job.postedDate}</span>
+                </p>
+                <button className="btn-primary btn-sm btn rounded-md normal-case">
+                  Apply
+                </button>
+              </div>
             </div>
           </li>
         ))}
