@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const Header = () => {
   return (
-    <header className="navbar mx-auto w-[1400px] bg-base-100">
+    <header className="navbar mx-auto h-20 w-[1400px] max-w-full bg-base-100">
       <div className="flex-1">
         <Link
           href="/test/jobs"
