@@ -47,7 +47,7 @@ export default function JobsPage() {
       <main className="relative pt-10">
         <Layout toggleSevenDays={toggleSevenDays} toggleSort={handleToggleSort}>
           <div
-            className={`flex flex-col gap-10 p-4 pt-0 ${
+            className={`flex max-w-full flex-col gap-10 p-4 pt-0 ${
               isFetching ? 'h-screen w-full items-center justify-center' : ''
             }`}
           >

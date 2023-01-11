@@ -28,7 +28,7 @@ export const Card = ({
 }: CardProps) => {
   return (
     <div
-      className={`flex w-full flex-col rounded-md border border-black/5 bg-base-100 shadow-xl transition-all lg:card-side ${
+      className={`flex w-full max-w-full flex-col rounded-md border border-black/5 bg-base-100 shadow-xl transition-all lg:card-side ${
         expanded ? 'col-span-full bg-gray-50 xl:w-full' : ''
       }`}
     >
