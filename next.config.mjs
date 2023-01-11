@@ -13,5 +13,8 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ['placeimg.com', 'logo.clearbit.com']
+  }
 };
 export default config;
