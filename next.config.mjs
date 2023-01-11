@@ -14,7 +14,12 @@ const config = {
     defaultLocale: "en",
   },
   images: {
-    domains: ['placeimg.com', 'logo.clearbit.com']
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   }
 };
 export default config;
