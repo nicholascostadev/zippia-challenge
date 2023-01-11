@@ -7,9 +7,9 @@ export const Header = () => {
       <div className="flex-1">
         <Link
           href="/test/jobs"
-          className="text-xl font-bold normal-case hover:text-gray-600"
+          className="text-3xl font-bold normal-case hover:text-gray-600"
         >
-          TESTE
+          Zippia Test
         </Link>
       </div>
       <div className="flex-none gap-4">
